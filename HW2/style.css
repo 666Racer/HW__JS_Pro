@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+body {
+    background-color: PapayaWhip;
+    color: saddlebrown;
+    padding-top: 100px;
+}
+
+li {
+    margin-bottom: 1em; /* Расстояние снизу */
+   }
+  
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 25px;
+}
+  
+.reviews__send__form {
+    margin-bottom: 40px;
+}
+  
+.reviews__send__button {
+    padding: 10px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: maroon;
+    color: PapayaWhip;
+}
+
+.reviews__existing__heading{
+    margin-bottom: 20px;
+}
+
+.reviews__box{
+    padding-left: 25px;
+}
