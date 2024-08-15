@@ -1,0 +1,60 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+.input__container {
+    background-color: khaki;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 40px;
+}
+
+.input__title{
+    margin-bottom: 20px;
+}
+  
+.button__add {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    border: transparent;
+    background-color: mediumpurple;
+    align-self: center;
+}
+
+.button__add:hover {
+    color: khaki;
+}
+
+.button__add:active {
+    color: wheat;
+}
+
+.reviews__box {
+    background-color: mediumpurple;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 40px;
+}
+
+.button__delete {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    border: transparent;
+    background-color: khaki;
+    align-self: center;
+}
+
+.button__delete:hover {
+    color: mediumpurple;
+}
+
+.button__delete:active {
+    color: wheat;
+}

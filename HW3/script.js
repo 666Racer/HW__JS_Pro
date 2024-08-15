@@ -20,30 +20,19 @@ const addBtnEl = document.querySelector(".button__add");
 const delBtnEl = document.querySelector(".button__delete");
 //reviews on page
 const reviewsBox = document.querySelector(".reviews__box");
-/*//id generator
-function idGenerator() {
-    let id = 0;
-    return function () {
-      id += 1;
-      return id;
-    };
-}
-  
-const reviewId = createIdGenerator();
-const reviewsIds = [];*/
 
-//listeners
-/*delBtnEl.addEventListener('click', (event) => {
-    event.preventDefault();
-    if (localStorage.length > 0){
-        localStorage.removeItem('');
-        alert('Text from locale storage was deleted');
-    }
-    else {
-        alert('Nothing to delete in local storage');
-    }
-});*/
+// function generatorId() {
+//   let id = 0;
+//   return function () {
+//     id += 1;
+//     return id;
+//   };
+// }
+// let reviewsIds = [];
+// let reviewId = generatorId();
+// reviewsIds.push(reviewId);
 
+//listener
 addBtnEl.addEventListener('click', (event) => {
     event.preventDefault();
     //adding to local storage
@@ -63,8 +52,8 @@ addBtnEl.addEventListener('click', (event) => {
     reviewEl.value = "";
     //show on page
     const listProducts = document.querySelector(".reviews__box");
-
-      for (let i = 0; i < localStorage.length; i++) {
+    //без for не работает удаление из локального хранилища; а с ним появляются отзывы с первого. Если начать с reviewId, то не работает вообще
+      for (let i = 0; i < localStorage.length; i++) { 
         let productName = localStorage.key(i);
         let reviewSet = JSON.parse(localStorage.getItem(productName));
 
@@ -101,6 +90,7 @@ addBtnEl.addEventListener('click', (event) => {
       function deleteReviewBtn(textReview, setReview, product) {
         const delBtn = document.createElement("button");
         delBtn.textContent = "Delete review";
+        delBtn.classList.add("button__delete");
 
         delBtn.addEventListener("click", () => {
           if (setReview.length > 1) {
@@ -118,17 +108,5 @@ addBtnEl.addEventListener('click', (event) => {
         });
         return delBtn;
       }
-    //showing on page
-    /*let reviewtoAdd = localStorage.getItem(JSON.stringify(productName));
-    if (reviewtoAdd != null) {
-        reviewsBox.insertAdjacentHTML("beforeend",
-        `<h2 class="reviews__box__product">${productName}</h2>
-        <p class="reviews__box__review>${productReview}</p>
-        <button class="button__delete">Delete review</button>
-        `
-        )
-    } else {
-        alert('Нечего загружать из локального хранилища');
-    }*/
 });
 
